@@ -1,0 +1,30 @@
+html, body { 
+    margin: 0; 
+    padding: 0; 
+    height: 100%;
+}
+body { 
+    display: flex; 
+    flex-direction: column;
+    text-align: center; 
+}
+#header { 
+    display: flex; 
+    flex-direction: row; 
+    height: 17%; 
+    text-align: center; 
+    font-size: 200%; 
+    background-color: aqua;
+}
+#header div { 
+    width: 33%; 
+}
+
+#search {
+    height: 20%;
+    background-color: blueviolet;
+}
+#gold {
+    background-color: chocolate;
+    height: 63%;
+}
