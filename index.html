@@ -33,11 +33,13 @@
 
         </div>
     </header>
-    <div id="search">
-        <input type="text" placeholder="Zacznij wyszukiwanie..." size="50">
+    <form  id="search" method="get" action="http://www.google.com/search" target="_blank">
+    <div>
+        <input type="text" name="q" placeholder="Wyszukaj w Google" size="50">
         <br>
-        <button id="szukaj" style="margin-right: 10px;">Szukaj</button><button id="reset">Wymaż</button>
+        <input type="submit" style="margin-right: 10px;" value="Wyszukaj">
     </div>
+    </form>
     <div id="gold"></div>
 </body>
 

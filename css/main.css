@@ -14,7 +14,7 @@ body {
     height: 17%; 
     text-align: center; 
     font-size: 200%; 
-    background-color: aqua;
+    background-image: linear-gradient(to bottom right, DeepSkyBlue, gold);
 }
 #header div { 
     width: 33%; 
@@ -22,9 +22,9 @@ body {
 
 #search {
     height: 20%;
-    background-color: blueviolet;
+    background-image: linear-gradient(to bottom left, gold, DeepSkyBlue);
 }
 #gold {
-    background-color: chocolate;
+    background-image: linear-gradient(to bottom right, DeepSkyBlue, gold);
     height: 63%;
 }
