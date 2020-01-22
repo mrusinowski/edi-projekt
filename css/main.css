@@ -7,8 +7,10 @@ body {
     display: flex; 
     flex-direction: column;
     text-align: center; 
+    font-family: 'Lato';
 }
 #header { 
+    font-family: 'Lato';
     display: flex; 
     flex-direction: row;
     min-height: 17%; 
@@ -61,4 +63,5 @@ svg.ct-chart-bar, svg.ct-chart-line{
 #air-span {
     color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    font-family: 'Lato';
 }
