@@ -24,7 +24,13 @@ body {
     height: 20%;
     background-image: linear-gradient(to bottom left, gold, DeepSkyBlue);
 }
-#gold {
+#charts {
     background-image: linear-gradient(to bottom right, DeepSkyBlue, gold);
     height: 63%;
+    display: flex;
+    flex-direction: row;
+}
+
+#charts div {
+    width: 33.3%;
 }
