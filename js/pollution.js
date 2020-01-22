@@ -19,9 +19,8 @@ function drawPollutionChart() {
     })
         .then((res) => { return res.json() })
         .then((json) => {
-            console.log(json.history)
+            console.log(json)
             //pollution_chart_config.labels.push(json.history[0].values[0].name)
-            //console.log(type)
             for (let i = 0; i < json.history.length; i++) {
                 try {
                     let date = json.history[i].fromDateTime

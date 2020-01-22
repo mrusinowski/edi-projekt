@@ -14,6 +14,8 @@ window.onload = () => {
                 if (json.current.indexes[0].description == "W tej okolicy nie ma jeszcze naszych sensorów.")
                     json.current.indexes[0].description = "Brak danych."
                 document.getElementById('air-span').innerHTML = json.current.indexes[0].description
+                let color = json.current.indexes[0].color
+                document.getElementById('air-span').style.textShadow = "-2px 0 "+color+", 0 2px "+color+", 2px 0 "+color+", 0 -2px "+color
             })
     }
     document.getElementById('cities').onchange = () => {
