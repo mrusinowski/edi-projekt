@@ -1,5 +1,4 @@
 window.onload = () => {
-    function getAirPollution()
     document.getElementById('cities').onchange = () => {
         getAirPollution()
         drawPollutionChart()
