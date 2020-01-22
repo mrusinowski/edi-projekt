@@ -17,4 +17,5 @@ function drawWeatherChart() {
             var span = document.createElement("span");
             span.innerHTML=" "
             src.appendChild(span);
+        })
 }
