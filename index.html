@@ -5,12 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico"/>
+    <link rel="stylesheet" href="css/latofonts.css">
+    <link rel="stylesheet" href="css/latostyle.css">
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/chartist.css">
+    <script src="js/main.js"></script>
     <script src="js/jquery-3.4.1.slim.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/chartist.js"></script>
     <script src="js/air.js"></script>
+    <script src="js/pollution.js"></script>
     <title>Homepage</title>
 </head>
 
@@ -26,21 +33,33 @@
                 <option data-lat="52.4058" data-lng="16.8999" value="poznan">Poznań</option>
                 <option data-lat="50.0123784" data-lng="20.9880739" value="tarnow">Tarnów</option>
                 <option data-lat="50.0374531" data-lng="22.0047174" value="rzeszow">Rzeszów</option>
+                <option data-lat="53.4301818" data-lng="14.5509623" value="szczecin">Szczecin</option>
                 <option data-lat="51.5073219" data-lng="-0.1276474" value="londyn">Londyn</option>
-                <option data-lat="53.4301818" data-lng="14.5509623" value="dublin">Szczecin</option>
             </select>
         </div>
-
-        </div>
     </header>
-    <form  id="search" method="get" action="http://www.google.com/search" target="_blank">
-    <div>
-        <input type="text" name="q" placeholder="Wyszukaj w Google" size="50">
-        <br>
-        <input type="submit" style="margin-right: 10px;" value="Wyszukaj">
+    <div id="search">
+        <form method="get" action="http://www.google.com/search" target="_blank">
+            <img src="img/search.png" alt=""><br>
+            <input type="text" name="q" placeholder="Wyszukaj w Google" size="50">
+            <br>
+            <input type="submit" style="margin-right: 10px;" value="Wyszukaj">
+        </form>
     </div>
-    </form>
-    <div id="gold"></div>
+    <div id="charts">
+        <div id="pollution" >
+            <select id="pollution-type" name="type" id="pollution_type">
+                <option value="0">PM1</option>
+                <option value="1">PM25</option>
+                <option value="2">PM10</option>
+                <option value="3">Ciśnienie</option>
+                <option value="4">Wilgotność</option>
+                <option value="5">Temperatura</option>
+            </select><br>
+            <div id="pollution-chart" class="ct-chart ct-square"></div>
+        </div>
+        <div id="gold"></div>
+    </div>
 </body>
 
 </html>
