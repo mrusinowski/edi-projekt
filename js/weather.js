@@ -15,7 +15,15 @@ function drawWeatherChart() {
             var src = document.getElementById("weather");
             src.appendChild(img);
             var span = document.createElement("span");
-            span.innerHTML=" "
+            span.innerHTML=myJson.main.temp + "°C"
             src.appendChild(span);
+            var br = document.createElement("br");
+            src.appendChild(br);
+            var img1 = document.createElement("img");
+            img1.src = "img/wind.png";
+            src.appendChild(img1);
+            var span1 = document.createElement("span");
+            span1.innerHTML="\n" + myJson.wind.speed + "m/s";
+            src.appendChild(span1);
         })
 }

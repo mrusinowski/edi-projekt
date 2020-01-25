@@ -2,8 +2,10 @@ var pollution_chart_config = {
     labels: [],
     series: [[]]
 }
-var chart = null
+var chart1 = null
 function drawPollutionChart() {
+    document.getElementById("no-data").innerHTML = ""
+    let no_data = 0
     pollution_chart_config.series = [[]]
     pollution_chart_config.labels = []
     let cities = document.getElementById('cities')
@@ -19,7 +21,7 @@ function drawPollutionChart() {
     })
         .then((res) => { return res.json() })
         .then((json) => {
-            console.log(json)
+            //console.log(json)
             //pollution_chart_config.labels.push(json.history[0].values[0].name)
             for (let i = 0; i < json.history.length; i++) {
                 try {
@@ -30,12 +32,19 @@ function drawPollutionChart() {
                     time = time.split(":")
                     date = day + " " + time[0] + ":" + time[1]
                     pollution_chart_config.labels.push(date)
+
+                    if(json.history[i].values[type] == undefined) no_data++
+                    
+                    if(no_data == json.history.length) document.getElementById("no-data").innerHTML = "Brak danych" 
+                    
                     pollution_chart_config.series[0].push(json.history[i].values[type].value)
+
+
                 } catch (err) {
 
                 }
             }
-            chart = new Chartist.Line('.ct-chart', pollution_chart_config)
+            if(type == 3) chart1 = new Chartist.Bar('#pollution-chart', pollution_chart_config, {high: 1025, low: 1015}) 
+            else chart1 = new Chartist.Bar('#pollution-chart', pollution_chart_config)
         })
 }
-

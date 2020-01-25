@@ -65,8 +65,14 @@ svg.ct-chart-bar, svg.ct-chart-line{
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-family: 'Lato';
 }
-#air-span {
-    color: black;
+
+#no-data {
+    color: red;
+    font-size: 125%;
+    font-weight: bolder;
+}
+#weather-span {
+    color: white;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
     font-family: 'Lato';
 }
