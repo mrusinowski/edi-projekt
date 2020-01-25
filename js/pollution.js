@@ -35,6 +35,7 @@ function drawPollutionChart() {
 
                 }
             }
-            chart1 = new Chartist.Bar('#pollution-chart', pollution_chart_config)
+            if(type == 3) chart1 = new Chartist.Bar('#pollution-chart', pollution_chart_config, {high: 1025, low: 1020}) 
+            else chart1 = new Chartist.Bar('#pollution-chart', pollution_chart_config)
         })
 }
