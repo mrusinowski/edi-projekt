@@ -8,4 +8,5 @@ window.onload = () => {
     }
     getAirPollution()
     drawPollutionChart()
+    drawgoldChart()
 }

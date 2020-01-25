@@ -58,8 +58,13 @@
             </select><br>
             <div id="pollution-chart" class="ct-chart ct-square"></div>
         </div>
-        <div id="gold"></div>
+        <div id="gold">
+            <label for="gold_days">Ilość ostatnich dni na wykresie (5-15):</label>
+            <input type="number" id="gold_days" name="gold_days"min="5" max="15" value="10" onchange="drawgoldChart()"><br>
+            <div id="gold-chart" class="ct-chart ct-bar"></div>
+        </div>
     </div>
+
 </body>
 
 </html>
