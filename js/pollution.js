@@ -35,7 +35,7 @@ function drawPollutionChart() {
 
                 }
             }
-            chart = new Chartist.Bar('.ct-chart', pollution_chart_config)
+            chart = new Chartist.Bar('#pollution-chart', pollution_chart_config)
         })
 }
 
