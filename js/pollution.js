@@ -62,6 +62,6 @@ function drawgoldChart() {
                     gold_chart_config.labels.push(l)
                     gold_chart_config.series[0].push(s)
                 }
-                chart2 = new Chartist.Bar('#gold-chart', gold_chart_config, gold_options)
+                chart2 = new Chartist.Line('#gold-chart', gold_chart_config, gold_options)
             })
 }
