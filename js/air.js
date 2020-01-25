@@ -10,7 +10,7 @@ function getAirPollution() {
     })
         .then((res) => { return res.json() })
         .then((json) => {
-            if (json.current.indexes[0].description == "W tej okolicy nie ma jeszcze naszych sensorów.")
+            if (json.current.indexes[0].value == null)
                 json.current.indexes[0].description = "Brak danych."
             document.getElementById('air-span').innerHTML = json.current.indexes[0].description
             let color = json.current.indexes[0].color
